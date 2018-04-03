@@ -6,23 +6,21 @@ import java.util.*;
 
 import static org.junit.Assert.*;
 
-// @RunWith(value = Parameterized.class)
+@RunWith(value = Parameterized.class)
 public class TemperatureConverterTest {
 
-    /*
     @Parameterized.Parameter(0)
     public double expected;
     @Parameterized.Parameter(1)
     public double value;
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name="{index}convertCToFTest({0})={1}")
     public static Collection<Object[]> getTestData() {
         return Arrays.asList(new Object[][] {
                 {89.6, 32},
                 {89.6, 32}
         });
     }
-    */
 
     public static final double DELTA = 0.1;
 
