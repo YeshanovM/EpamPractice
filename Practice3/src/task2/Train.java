@@ -27,6 +27,10 @@ public class Train <T extends Carriage> {
         carriages.remove(carriage);
     }
 
+    public ArrayList<T> getCarriages() {
+        return carriages;
+    }
+
     public void sortByComfortLevel() {
         carriages.sort((Object a, Object b) -> {
             Carriage carriage1 = (Carriage) a;

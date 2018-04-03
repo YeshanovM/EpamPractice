@@ -5,4 +5,9 @@ public class EconomClassCarriage extends Carriage {
     public EconomClassCarriage() {
         super(1, 54, 54, 54);
     }
+
+    @Override
+    public String getType() {
+        return "Economic";
+    }
 }

@@ -26,6 +26,8 @@ public abstract class Carriage {
         return luggage;
     }
 
+    public abstract String getType();
+
     @Override
     public String toString() {
         return "Carriage{" +
