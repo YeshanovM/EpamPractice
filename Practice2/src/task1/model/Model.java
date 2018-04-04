@@ -13,6 +13,10 @@ public class Model {
         generateData();
     }
 
+    public Model(Book[] books) {
+        this.books = books;
+    }
+
     public Book[] filterByAuthor(String author) {
         Book[] result = new Book[books.length];
         int count = 0;
