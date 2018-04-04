@@ -1,16 +1,14 @@
 package task1;
 
+import task1.controller.Controller;
 import task1.model.Model;
+import task1.view.View;
 
 public class Runner {
     public static void run() {
         Model model = new Model();
-        System.out.println(model.addRecord(new String[] {
-                "Yeshanov",
-                "Maksym",
-                "1999.07.09",
-                "+380(99)25-45-411",
-                "Akademica Yangelya, 20f, 423"
-        }));
+        View view = new View();
+        Controller controller = new Controller(model, view);
+        controller.run();
     }
 }

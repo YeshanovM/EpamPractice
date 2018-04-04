@@ -1,11 +1,11 @@
 package task1.model;
 
 import task1.model.entity.Record;
-
 import java.util.ArrayList;
 
 public class Model {
     private ArrayList<Record> records;
+
     private final String[] REGEXP = {
             "[A-Z]([a-z]{1,16})",
             "[A-Z]([a-z]{1,16})",
@@ -14,24 +14,33 @@ public class Model {
             "(([A-Z]?([a-z]{0,15})([ -]?))|([0-9]{1,5}([ -]?))){1,5}" + ", " + "([0-9]{1,4}([a-z]?))" + ", " + "([0-9]{1,4})"
     };
 
+    public static final String[] RECORD_FIELDS = {
+            "Name",
+            "Surname",
+            "Birthday",
+            "Phone",
+            "Address"
+    };
+
     public Model() {
         records = new ArrayList<>();
     }
 
-    public ArrayList<Record> getRecords() {
-        return records;
+    public String[] getRecords() {
+        String[] result = new String[records.size()];
+        for(int i = 0; i < records.size(); i++) {
+            result[i] = records.get(i).toString();
+        }
+        return result;
     }
 
-    public void setRecords(ArrayList<Record> records) {
-        this.records = records;
-    }
-
-    public boolean addRecord(String[] data) throws IndexOutOfBoundsException {
+    public int addRecord(String[] data) throws IndexOutOfBoundsException {
         for(int i = 0; i < REGEXP.length; i++) {
             if(!validateString(data[i], REGEXP[i]))
-                return false;
+                return i;
         }
-        return true;
+        records.add(new Record(data[0], data[1], data[2], data[3], data[4]));
+        return -1;
     }
 
     private boolean validateString(String string, String regex) {

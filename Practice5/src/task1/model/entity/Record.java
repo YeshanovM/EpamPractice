@@ -6,11 +6,11 @@ import java.util.Objects;
 public class Record {
     private String surname;
     private String name;
-    private Date birthday;
+    private String birthday;
     private String phone;
     private String address;
 
-    public Record(String surname, String name, Date birthday, String phone, String address) {
+    public Record(String surname, String name, String birthday, String phone, String address) {
         this.surname = surname;
         this.name = name;
         this.birthday = birthday;
@@ -34,11 +34,11 @@ public class Record {
         this.name = name;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
