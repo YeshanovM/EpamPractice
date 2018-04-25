@@ -1,6 +1,8 @@
 package task2.entity;
 
-public class Circle extends Shape {
+import java.io.Serializable;
+
+public class Circle extends Shape implements Serializable {
 
     private double radius;
 

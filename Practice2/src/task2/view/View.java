@@ -9,6 +9,7 @@ public class View {
     private static final String ERR_NO_DATA = "Error! Nothing to show! Generate data first.";
     private static final String INVITE = "> ";
     private static final String MESSAGE_AREA = "Area: ";
+    private static final String MESSAGE_OPERATION_FAILED = "Operation failed";
     private static final String[] MENU_DESCRIPTIONS = {
             "show menu",
             "generate data",
@@ -17,6 +18,8 @@ public class View {
             "calculate total area of shapes of the given type (Circle, Rectangle or Triangle)",
             "sort shapes by area",
             "sort shapes by color",
+            "read data from file",
+            "save data to file",
             "exit"
     };
 
@@ -53,5 +56,9 @@ public class View {
 
     public void printInvite() {
         System.out.print(INVITE);
+    }
+
+    public void printOperationFailedMessage() {
+        System.out.println(MESSAGE_OPERATION_FAILED);
     }
 }

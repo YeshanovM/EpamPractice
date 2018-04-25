@@ -1,6 +1,8 @@
 package task2.entity;
 
-public class Triangle extends Shape {
+import java.io.Serializable;
+
+public class Triangle extends Shape implements Serializable {
 
     private double a, b, c;
 

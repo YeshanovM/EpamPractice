@@ -2,12 +2,14 @@ package task2.model;
 
 import task2.data.Data;
 import task2.entity.*;
+import task2.utils.Serializator;
 
 import java.util.Arrays;
 
 public class Model {
     private Shape[] shapes;
     public static final int DEFAULT_SHAPES_COUNT = 10;
+    private static final String PATHNAME = "shapes.ser";
 
     public Model() {
         shapes = new Shape[0];
@@ -89,5 +91,25 @@ public class Model {
 
     public Shape[] getShapes() {
         return shapes;
+    }
+
+    public boolean saveToFile(String pathname) {
+        return Serializator.saveToFile(pathname, shapes);
+    }
+
+    public boolean saveToFile() {
+        return saveToFile(PATHNAME);
+    }
+
+    public boolean readFromFile(String pathname) {
+        Shape[] newShapes = Serializator.readFromFile(pathname);
+        if(newShapes == null)
+            return false;
+        shapes = newShapes;
+        return true;
+    }
+
+    public boolean readFromFile() {
+        return readFromFile(PATHNAME);
     }
 }

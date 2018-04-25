@@ -19,7 +19,9 @@ public class Controller {
             "5 <type>",
             "6",
             "7",
-            "8"
+            "8 <pathname>",
+            "9 <pathname>",
+            "10"
     };
 
     public Controller(Model model, View view) {
@@ -80,11 +82,30 @@ public class Controller {
                     model.sortByColor();
                     break;
                 case 8 :
+                    arg = getArgument(input);
+                    boolean result;
+                    if(arg.length() == 0)
+                        result = model.readFromFile();
+                    else
+                        result = model.readFromFile(arg);
+                    if(!result)
+                        view.printOperationFailedMessage();
+                    break;
+                case 9 :
+                    arg = getArgument(input);
+                    if(arg.length() == 0)
+                        result = model.saveToFile();
+                    else
+                        result = model.saveToFile(arg);
+                    if(!result)
+                        view.printOperationFailedMessage();
+                    break;
+                case 10 :
                     break;
                 default :
                     view.printInvalidCmdMessage();
             }
-        } while(cmd != 8);
+        } while(cmd != 10);
     }
 
     private String getInput() {
@@ -96,7 +117,7 @@ public class Controller {
         String[] splittedInput = input.trim().split(" +", 2);
         try {
             int command = Integer.parseInt(splittedInput[0]);
-            return (command > 0 && command < 9) ? command : -1;
+            return (command > 0 && command < 11) ? command : -1;
         }
         catch (NumberFormatException e) {
             return -1;
