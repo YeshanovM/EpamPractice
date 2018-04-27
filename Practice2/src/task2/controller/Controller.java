@@ -1,5 +1,7 @@
 package task2.controller;
 
+import org.apache.logging.log4j.*;
+
 import task2.entity.*;
 import task2.model.Model;
 import task2.view.View;
@@ -24,17 +26,23 @@ public class Controller {
             "10"
     };
 
+    private static final Logger logger = LogManager.getLogger(Controller.class);
+
     public Controller(Model model, View view) {
         this.model = model;
         this.view = view;
+        logger.trace("Controller created with " + model + ", " + view);
     }
 
     public void run() {
+        logger.info("Controller started");
         view.printMenu(MENU_COMMANDS);
         int cmd;
         do {
+            logger.info("Asked for command");
             view.printInvite();
             String input = getInput();
+            logger.warn("Reading command");
             cmd = getCommand(input);
             String arg;
             switch (cmd) {
@@ -44,68 +52,88 @@ public class Controller {
                 case 2 :
                     arg = getArgument(input);
                     try {
+                        logger.warn("Reading int argument");
                         int count = Integer.parseInt(arg);
                         if(model.generate(count) == -1)
                             throw new NumberFormatException();
+                        logger.info("Data generated");
                         view.printData(model.getShapes());
                     }
                     catch(NumberFormatException e) {
+                        logger.error("Invalid argument");
                         view.printInvalidArgMessage();
                     }
                     break;
                 case 3 :
                     view.printData(model.getShapes());
+                    logger.info("Data shown");
                     break;
                 case 4 :
                     view.printArea(model.calcTotalArea());
+                    logger.info("Total area shown");
                     break;
                 case 5 :
+                    logger.warn("Reading argument");
                     arg = getArgument(input);
                     switch (arg) {
                         case "Circle" :
                             view.printArea(model.calcTotalArea(Circle.class));
+                            logger.info("Total circles area shown");
                             break;
                         case "Rectangle" :
                             view.printArea(model.calcTotalArea(Rectangle.class));
+                            logger.info("Total rectangles area shown");
                             break;
                         case "Triangle" :
                             view.printArea(model.calcTotalArea(Triangle.class));
+                            logger.info("Total triangles area shown");
                             break;
                         default:
                             view.printInvalidArgMessage();
+                            logger.error("Invalid argument");
                     }
                     break;
                 case 6 :
                     model.sortByArea();
+                    logger.info("Sorted by area");
                     break;
                 case 7 :
+                    logger.info("Sorted by color");
                     model.sortByColor();
                     break;
                 case 8 :
+                    logger.warn("Reading filename");
                     arg = getArgument(input);
                     boolean result;
                     if(arg.length() == 0)
                         result = model.readFromFile();
                     else
                         result = model.readFromFile(arg);
-                    if(!result)
+                    if(!result) {
                         view.printOperationFailedMessage();
+                        logger.error("Operation failed");
+                    }
                     break;
                 case 9 :
+                    logger.warn("Reading filename");
                     arg = getArgument(input);
                     if(arg.length() == 0)
                         result = model.saveToFile();
                     else
                         result = model.saveToFile(arg);
-                    if(!result)
+                    if(!result) {
                         view.printOperationFailedMessage();
+                        logger.error("Operation failed");
+                    }
                     break;
                 case 10 :
                     break;
                 default :
                     view.printInvalidCmdMessage();
+                    logger.error("Invalid command");
             }
         } while(cmd != 10);
+        logger.info("Program exited");
     }
 
     private String getInput() {
