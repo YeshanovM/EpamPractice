@@ -1,4 +1,4 @@
-package task1.subtask1;
+package task1;
 
 import java.lang.reflect.*;
 

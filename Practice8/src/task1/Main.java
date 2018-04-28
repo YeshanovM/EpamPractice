@@ -1,4 +1,4 @@
-package task1.subtask1;
+package task1;
 
 public class Main {
     public static void main(String[] args) {
