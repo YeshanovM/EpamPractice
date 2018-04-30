@@ -31,6 +31,7 @@ public class Runner {
         System.out.println("After: " + Arrays.toString(array));
         List<String> list = filter(Arrays.asList(array), s -> s.charAt(0) == 's');
         System.out.println("Strings which starts with \"s\": " + list);
+        System.out.println("Strings in uppercase: " + toUpperCase(Arrays.asList(array)));
     }
 
     public static <T> T[] filter(T[] array, Predicate<T> predicate) {
@@ -47,6 +48,15 @@ public class Runner {
         for(String item : strs) {
             if(predicate.test(item))
                 result.add(item);
+        }
+        return result;
+    }
+
+    public static List<String> toUpperCase(List<String> strs) {
+        List<String> result = new ArrayList<>();
+        IFunctionalConverter converter = String::toUpperCase;
+        for(String str : strs) {
+            result.add(converter.convert(str));
         }
         return result;
     }
