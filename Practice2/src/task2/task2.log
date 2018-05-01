@@ -1,24 +1,21 @@
-[INFO ] 2018-04-27 18:18:55.903 [main] Controller - Controller started
-[INFO ] 2018-04-27 18:18:55.921 [main] Controller - Asked for command
-[WARN ] 2018-04-27 18:19:14.927 [main] Controller - Reading command
-[WARN ] 2018-04-27 18:19:14.928 [main] Controller - Reading int argument
-[ERROR] 2018-04-27 18:19:14.930 [main] Controller - Invalid argument
-[INFO ] 2018-04-27 18:19:14.930 [main] Controller - Asked for command
-[WARN ] 2018-04-27 18:19:43.655 [main] Controller - Reading command
-[WARN ] 2018-04-27 18:19:43.657 [main] Controller - Reading int argument
-[INFO ] 2018-04-27 18:19:43.692 [main] Controller - Data generated
-[INFO ] 2018-04-27 18:19:43.695 [main] Controller - Asked for command
-[WARN ] 2018-04-27 18:20:08.933 [main] Controller - Reading command
-[ERROR] 2018-04-27 18:20:08.934 [main] Controller - Invalid command
-[INFO ] 2018-04-27 18:20:08.935 [main] Controller - Asked for command
-[WARN ] 2018-04-27 18:20:14.573 [main] Controller - Reading command
-[ERROR] 2018-04-27 18:20:14.574 [main] Controller - Invalid command
-[INFO ] 2018-04-27 18:20:14.575 [main] Controller - Asked for command
-[WARN ] 2018-04-27 18:20:21.379 [main] Controller - Reading command
-[INFO ] 2018-04-27 18:20:21.570 [main] Controller - Sorted by area
-[INFO ] 2018-04-27 18:20:21.570 [main] Controller - Asked for command
-[WARN ] 2018-04-27 18:20:25.773 [main] Controller - Reading command
-[INFO ] 2018-04-27 18:20:25.778 [main] Controller - Data shown
-[INFO ] 2018-04-27 18:20:25.779 [main] Controller - Asked for command
-[WARN ] 2018-04-27 18:20:30.992 [main] Controller - Reading command
-[INFO ] 2018-04-27 18:20:30.993 [main] Controller - Program exited
+[INFO ] 2018-05-01 16:09:56.296 [main] Controller - Controller started
+[INFO ] 2018-05-01 16:09:56.307 [main] Controller - Asked for command
+[WARN ] 2018-05-01 16:10:17.885 [main] Controller - Reading command
+[INFO ] 2018-05-01 16:10:17.886 [main] Controller - Program exited
+[INFO ] 2018-05-01 16:10:52.704 [main] Controller - Controller started
+[INFO ] 2018-05-01 16:10:52.723 [main] Controller - Asked for command
+[WARN ] 2018-05-01 16:11:00.401 [main] Controller - Reading command
+[WARN ] 2018-05-01 16:11:00.403 [main] Controller - Reading int argument
+[INFO ] 2018-05-01 16:11:00.502 [main] Controller - Data generated
+[INFO ] 2018-05-01 16:11:00.510 [main] Controller - Asked for command
+[WARN ] 2018-05-01 16:11:20.521 [main] Controller - Reading command
+[INFO ] 2018-05-01 16:11:20.522 [main] Controller - Total area shown
+[INFO ] 2018-05-01 16:11:20.523 [main] Controller - Asked for command
+[WARN ] 2018-05-01 16:11:21.825 [main] Controller - Reading command
+[INFO ] 2018-05-01 16:11:22.033 [main] Controller - Sorted by area
+[INFO ] 2018-05-01 16:11:22.034 [main] Controller - Asked for command
+[WARN ] 2018-05-01 16:11:27.039 [main] Controller - Reading command
+[INFO ] 2018-05-01 16:11:27.046 [main] Controller - Data shown
+[INFO ] 2018-05-01 16:11:27.047 [main] Controller - Asked for command
+[WARN ] 2018-05-01 16:11:31.008 [main] Controller - Reading command
+[INFO ] 2018-05-01 16:11:31.009 [main] Controller - Program exited
