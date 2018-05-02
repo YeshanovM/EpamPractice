@@ -1,0 +1,11 @@
+D:\Max_Y\EpamPractice\Practice9\.idea\uiDesigner.xml: 27
+D:\Max_Y\EpamPractice\Practice9\.idea\workspace.xml: 24
+D:\Max_Y\EpamPractice\Practice9\out\production\Practice9\task3\Runner.class: 1
+D:\Max_Y\EpamPractice\Practice9\out\production\Practice9\task4\Runner$ArraySum.class: 1
+D:\Max_Y\EpamPractice\Practice9\src\task1\Runner.java: 1
+D:\Max_Y\EpamPractice\Practice9\src\task1\Task1.java: 2
+D:\Max_Y\EpamPractice\Practice9\src\task2\Runner.java: 1
+D:\Max_Y\EpamPractice\Practice9\src\task2\Task2.java: 2
+D:\Max_Y\EpamPractice\Practice9\src\task3\Runner.java: 3
+D:\Max_Y\EpamPractice\Practice9\src\task4\Runner.java: 10
+D:\Max_Y\EpamPractice\Practice9\src\task5\Runner.java: 9
